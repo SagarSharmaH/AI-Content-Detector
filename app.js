@@ -286,8 +286,10 @@ async function parseImageMetadata(file) {
 // In-browser fallback pipeline (used if backend is unreachable)
 async function getBrowserTextPipeline() {
   if (!browserTextPipeline) {
+    // Note: Always use 'wasm' (WebAssembly CPU) rather than 'webgpu'.
+    // WebGPU ONNX Runtime kernels have a known bug with quantized RoBERTa logits where binary class outputs are inverted.
     browserTextPipeline = pipeline('text-classification', TEXT_MODEL_ID, {
-      device: (typeof navigator !== 'undefined' && 'gpu' in navigator) ? 'webgpu' : 'wasm',
+      device: 'wasm',
       dtype: 'q8',
       progress_callback: p => {
         if (p.status === 'progress' && p.total) {
@@ -396,10 +398,12 @@ async function analyzeTextWithFallback(text, sourceName) {
     showProgress(`Checking section ${i + 1} of ${paragraphs.length}...`);
 
     const preds = await pipe(p, { top_k: null });
-    const aiItem = preds.find(x => x.label === 'ChatGPT');
-    const humanItem = preds.find(x => x.label === 'Human');
-    const aiScore = aiItem ? aiItem.score : 0;
-    const humanScore = humanItem ? humanItem.score : 0;
+    const aiItem = preds.find(x => x.label === 'ChatGPT' || x.label === 'LABEL_1');
+    const humanItem = preds.find(x => x.label === 'Human' || x.label === 'LABEL_0');
+    let aiScore = aiItem ? aiItem.score : 0;
+    let humanScore = humanItem ? humanItem.score : 0;
+    if (aiItem && !humanItem) humanScore = 1 - aiScore;
+    if (humanItem && !aiItem) aiScore = 1 - humanScore;
 
     sections.push({
       index: i + 1,
