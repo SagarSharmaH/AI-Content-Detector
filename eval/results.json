@@ -1,0 +1,332 @@
+{
+  "timestamp": "2026-11-22T17:07:11.103Z",
+  "text_model": {
+    "name": "onnx-community/chatgpt-detector-roberta-ONNX",
+    "base": "Hello-SimpleAI/chatgpt-detector-roberta",
+    "license": "CC-BY-SA 4.0 / MIT base",
+    "architecture": "RoBERTa-base (125M parameters)",
+    "quantization": "q8 (ONNX)",
+    "accuracy": "50.0% on benchmark set",
+    "total_tested": 10,
+    "correct": 5,
+    "inconclusive": 2,
+    "results": [
+      {
+        "id": "human_gettysburg",
+        "expected": "human",
+        "predicted": "ai_generated",
+        "plainCategory": "AI signals detected",
+        "aiModelScore": 95,
+        "humanModelScore": 0,
+        "wordCount": 160,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Four score and seven years ago our fathers brought forth on this continent, a ne...",
+            "chatgptScore": 0.9505080580711365,
+            "humanScore": 0
+          }
+        ],
+        "match": false,
+        "category": "Historical Oratory / Classic Prose"
+      },
+      {
+        "id": "human_wikipedia_pre2020",
+        "expected": "human",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 96,
+        "wordCount": 114,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Photosynthesis is a process used by plants and other organisms to convert light ...",
+            "chatgptScore": 0,
+            "humanScore": 0.9590051174163818
+          }
+        ],
+        "match": true,
+        "category": "Reference / Encyclopedia (Pre-LLM)"
+      },
+      {
+        "id": "human_casual_personal_essay",
+        "expected": "human",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 99,
+        "wordCount": 132,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Last Thursday, my old espresso machine gave up with an alarming hiss and a puddl...",
+            "chatgptScore": 0,
+            "humanScore": 0.9914118051528931
+          }
+        ],
+        "match": true,
+        "category": "Casual Personal Essay / Blog"
+      },
+      {
+        "id": "human_academic_peer_reviewed",
+        "expected": "human",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 100,
+        "wordCount": 106,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "To investigate the kinetic parameters governing mitochondrial ATP synthesis unde...",
+            "chatgptScore": 0,
+            "humanScore": 0.9995140433311462
+          }
+        ],
+        "match": true,
+        "category": "Scientific Peer-Reviewed Paper"
+      },
+      {
+        "id": "ai_gpt4_renewable_energy",
+        "expected": "ai_generated",
+        "predicted": "ai_generated",
+        "plainCategory": "AI signals detected",
+        "aiModelScore": 96,
+        "humanModelScore": 0,
+        "wordCount": 117,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "The rapid advancement of renewable energy technologies has transformed the globa...",
+            "chatgptScore": 0.964474618434906,
+            "humanScore": 0
+          }
+        ],
+        "match": true,
+        "category": "AI Expository Essay (GPT-4)"
+      },
+      {
+        "id": "ai_chatgpt_quantum_computing",
+        "expected": "ai_generated",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 99,
+        "wordCount": 129,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Quantum computing represents a paradigm shift in how we process information. Unl...",
+            "chatgptScore": 0,
+            "humanScore": 0.9885463714599609
+          }
+        ],
+        "match": false,
+        "category": "AI Educational Explanation (ChatGPT / GPT-3.5)"
+      },
+      {
+        "id": "ai_claude_compliance_letter",
+        "expected": "ai_generated",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 100,
+        "wordCount": 114,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "This memorandum serves to inform all departmental leads regarding upcoming modif...",
+            "chatgptScore": 0,
+            "humanScore": 0.9962897896766663
+          }
+        ],
+        "match": false,
+        "category": "AI Corporate Communication (Claude 3.5)"
+      },
+      {
+        "id": "ai_gpt4o_synthetic_review",
+        "expected": "ai_generated",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 95,
+        "wordCount": 120,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "I have been using these wireless noise-canceling headphones for the past three w...",
+            "chatgptScore": 0,
+            "humanScore": 0.9474673867225647
+          }
+        ],
+        "match": false,
+        "category": "AI Product Review (GPT-4o)"
+      },
+      {
+        "id": "edited_ai_essay_light_paraphrase",
+        "expected": "edited_paraphrased",
+        "predicted": "human",
+        "plainCategory": "Few AI signals",
+        "aiModelScore": 0,
+        "humanModelScore": 100,
+        "wordCount": 115,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Renewable power systems have fundamentally shifted how developing nations tackle...",
+            "chatgptScore": 0,
+            "humanScore": 0.99964839220047
+          }
+        ],
+        "match": false,
+        "category": "Lightly Edited AI Essay"
+      },
+      {
+        "id": "hybrid_mixed_document",
+        "expected": "mixed",
+        "predicted": "mixed",
+        "plainCategory": "Mixed or AI-assisted",
+        "aiModelScore": 0,
+        "humanModelScore": 100,
+        "wordCount": 203,
+        "paragraphCount": 4,
+        "paragraphs": [
+          {
+            "text": "When we set out in 2012 to catalog the vernal pools in northern Maine, we had li...",
+            "chatgptScore": 0,
+            "humanScore": 0.9837298393249512
+          },
+          {
+            "text": "By our seventh site along the Piscataquis watershed, we noticed an anomaly in wo...",
+            "chatgptScore": 0,
+            "humanScore": 0.9992306232452393
+          },
+          {
+            "text": "In recent years, computational ecological modeling has revolutionized how field ...",
+            "chatgptScore": 0,
+            "humanScore": 0.9995652437210083
+          },
+          {
+            "text": "In conclusion, modern analytical frameworks provide indispensable tools for cont...",
+            "chatgptScore": 0,
+            "humanScore": 0.9991583228111267
+          }
+        ],
+        "match": true,
+        "category": "Hybrid Document (50% Human / 50% AI)"
+      },
+      {
+        "id": "short_human_note",
+        "expected": "inconclusive",
+        "predicted": "inconclusive",
+        "plainCategory": "Inconclusive (Passage too short)",
+        "aiModelScore": 95,
+        "humanModelScore": 0,
+        "wordCount": 18,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Can you grab milk and eggs on your way home tonight? The corner grocery store cl...",
+            "chatgptScore": 0.9467802047729492,
+            "humanScore": 0
+          }
+        ],
+        "match": true,
+        "category": "Short Text Edge Case (Human)"
+      },
+      {
+        "id": "short_ai_snippet",
+        "expected": "inconclusive",
+        "predicted": "inconclusive",
+        "plainCategory": "Inconclusive (Passage too short)",
+        "aiModelScore": 0,
+        "humanModelScore": 99,
+        "wordCount": 16,
+        "paragraphCount": 1,
+        "paragraphs": [
+          {
+            "text": "Leveraging cutting-edge cloud architectures facilitates seamless scalability acr...",
+            "chatgptScore": 0,
+            "humanScore": 0.9947276711463928
+          }
+        ],
+        "match": true,
+        "category": "Short Text Edge Case (AI)"
+      }
+    ]
+  },
+  "image_model": {
+    "name": "onnx-community/Deep-Fake-Detector-v2-Model-ONNX",
+    "base": "prithivMLmods/Deep-Fake-Detector-v2-Model",
+    "license": "Apache 2.0",
+    "architecture": "Vision Transformer (google/vit-base-patch16-224-in21k, 86M params)",
+    "input_size": "224x224 RGB",
+    "samples_documented": [
+      {
+        "id": "human_dslr_landscape",
+        "category": "DSLR Camera Photography",
+        "expected": "human",
+        "has_camera_exif": true,
+        "metadata_indicators": "Canon Make/Model, F/8.0, 1/250s, ISO 100, sRGB",
+        "notes": "Natural optical depth of field, authentic sensor noise, realistic Bayer filter debayering artifacts."
+      },
+      {
+        "id": "human_smartphone_street",
+        "category": "Smartphone Mobile Capture",
+        "expected": "human",
+        "has_camera_exif": true,
+        "metadata_indicators": "Apple iPhone 14 Pro, f/1.78, 1/120s, ISO 64",
+        "notes": "Computational smartphone HDR, slight lens edge softening, genuine sensor characteristics."
+      },
+      {
+        "id": "ai_midjourney_v6_portrait",
+        "category": "Midjourney v6 Photorealistic Generation",
+        "expected": "ai_generated",
+        "has_camera_exif": false,
+        "metadata_indicators": "None or software tag",
+        "notes": "Smooth micro-textures, subtle iris asymmetry, frequency domain diffusion footprint."
+      },
+      {
+        "id": "ai_sdxl_fantasy_castle",
+        "category": "Stable Diffusion XL 1.0 (ComfyUI / WebUI)",
+        "expected": "ai_generated",
+        "has_camera_exif": false,
+        "metadata_indicators": "PNG tEXt chunk containing parameters: prompt, steps: 30, sampler: DPM++ 2M Karras, seed: 4210982",
+        "notes": "Diffusion pixel pattern, embedded generation parameters in PNG text chunks."
+      },
+      {
+        "id": "ai_dalle3_c2pa",
+        "category": "DALL-E 3 with C2PA Provenance",
+        "expected": "ai_generated",
+        "has_camera_exif": false,
+        "metadata_indicators": "C2PA claim manifest: trainedAlgorithmicMedia / OpenAI claim_generator",
+        "notes": "Photorealistic synthetic pixel rendering with embedded C2PA provenance credentials."
+      },
+      {
+        "id": "ai_flux_photoreal_studio",
+        "category": "Flux.1 Dev Generation",
+        "expected": "ai_generated",
+        "has_camera_exif": false,
+        "metadata_indicators": "Clean web export, no camera EXIF",
+        "notes": "State-of-the-art flow-matching architecture, extremely sharp eye highlights, subtle high-frequency artifacts."
+      },
+      {
+        "id": "edited_ai_compressed_social",
+        "category": "Compressed / Re-saved AI Generation",
+        "expected": "edited_paraphrased",
+        "has_camera_exif": false,
+        "metadata_indicators": "None (stripped EXIF/XMP)",
+        "notes": "Simulates social media re-compression where metadata is destroyed and JPEG block artifacts obscure diffusion noise."
+      },
+      {
+        "id": "human_scanned_archive_doc",
+        "category": "Flatbed Scanner Document",
+        "expected": "human",
+        "has_camera_exif": false,
+        "metadata_indicators": "Scanner device metadata or clean TIFF/JPEG",
+        "notes": "Paper grain, ink bleed, mechanical scanner dust particles, non-synthetic geometric layout."
+      }
+    ]
+  }
+}

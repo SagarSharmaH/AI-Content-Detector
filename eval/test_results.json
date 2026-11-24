@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "date": "2026-11-23T17:44:16.951Z",
+    "benchmark_version": "2.0.0",
+    "runner": "eval/run_evaluation.mjs",
+    "command": "node eval/run_evaluation.mjs"
+  },
+  "text_evaluation": {
+    "model_id": "onnx-community/chatgpt-detector-roberta-ONNX",
+    "base_model": "Hello-SimpleAI/chatgpt-detector-roberta",
+    "license": "CC-BY-SA 4.0 / MIT base",
+    "architecture": "RoBERTa-base (125M)",
+    "total_tested": 14,
+    "short_guardrails_passed": 2,
+    "metrics": {
+      "tp": 1,
+      "fp": 1,
+      "tn": 5,
+      "fn": 7,
+      "tpr": 12.5,
+      "fpr": 16.7,
+      "precision": 50,
+      "recall": 12.5,
+      "balanced_accuracy": 47.9,
+      "raw_accuracy": 42.9
+    },
+    "confusion_matrix": {
+      "actual_ai": {
+        "predicted_ai": 1,
+        "predicted_human": 7
+      },
+      "actual_human": {
+        "predicted_ai": 1,
+        "predicted_human": 5
+      }
+    },
+    "sample_breakdown": [
+      {
+        "id": "test_human_twain",
+        "domain": "Classic Literature (19th Century)",
+        "ground_truth": "human",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 94,
+        "wordCount": 106,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_human_darwin",
+        "domain": "Historical Scientific Prose",
+        "ground_truth": "human",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 114,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_human_wiki_tectonics",
+        "domain": "Encyclopedia Reference",
+        "ground_truth": "human",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 99,
+        "wordCount": 99,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_human_student_persuasive",
+        "domain": "Authentic Student Essay (Pre-LLM)",
+        "ground_truth": "human",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 69,
+        "wordCount": 101,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_human_pmc_crispr",
+        "domain": "Peer-Reviewed Scientific Abstract",
+        "ground_truth": "human",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 90,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_human_travel_blog",
+        "domain": "Casual Personal Travelogue",
+        "ground_truth": "human",
+        "predicted": "ai_generated",
+        "plainLabel": "AI signals detected",
+        "modelAiScore": 97,
+        "modelHumanScore": 0,
+        "wordCount": 115,
+        "paragraphCount": 1,
+        "paragraphs": [
+          97
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_gpt4o_economics",
+        "domain": "AI Policy Analysis (GPT-4o)",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 87,
+        "wordCount": 108,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_claude35_climate",
+        "domain": "AI Environmental Planning (Claude 3.5 Sonnet)",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 97,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_llama3_philosophy",
+        "domain": "AI Epistemology Essay (Llama 3 70B)",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 110,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_mistral_tech",
+        "domain": "AI Technical Architecture (Mistral Large)",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 93,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_gpt35_history",
+        "domain": "AI Historical Summary (ChatGPT / GPT-3.5)",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 98,
+        "wordCount": 96,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_paraphrased_light",
+        "domain": "Lightly Paraphrased AI Writing",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 98,
+        "wordCount": 106,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_ai_paraphrased_heavy",
+        "domain": "Heavily Paraphrased AI Writing",
+        "ground_truth": "ai_generated",
+        "predicted": "human",
+        "plainLabel": "Few AI signals",
+        "modelAiScore": 0,
+        "modelHumanScore": 94,
+        "wordCount": 103,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": false
+      },
+      {
+        "id": "test_mixed_essay_50_50",
+        "domain": "Hybrid Document (50% Human / 50% AI)",
+        "ground_truth": "mixed",
+        "predicted": "mixed",
+        "plainLabel": "Mixed or AI-assisted",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 122,
+        "paragraphCount": 2,
+        "paragraphs": [
+          0,
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_short_human_calendar",
+        "domain": "Short Text Edge Case (Human)",
+        "ground_truth": "inconclusive",
+        "predicted": "inconclusive",
+        "plainLabel": "Inconclusive (Short passage < 35 words)",
+        "modelAiScore": 0,
+        "modelHumanScore": 97,
+        "wordCount": 14,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      },
+      {
+        "id": "test_short_ai_headline",
+        "domain": "Short Text Edge Case (AI)",
+        "ground_truth": "inconclusive",
+        "predicted": "inconclusive",
+        "plainLabel": "Inconclusive (Short passage < 35 words)",
+        "modelAiScore": 0,
+        "modelHumanScore": 100,
+        "wordCount": 13,
+        "paragraphCount": 1,
+        "paragraphs": [
+          0
+        ],
+        "correct": true
+      }
+    ]
+  },
+  "image_evaluation": {
+    "model_id": "onnx-community/Deep-Fake-Detector-v2-Model-ONNX",
+    "base_model": "prithivMLmods/Deep-Fake-Detector-v2-Model",
+    "license": "Apache 2.0",
+    "intended_use": "Facial deepfakes and face manipulation",
+    "general_ai_support": "UNSUPPORTED / EXPERIMENTAL (Model card specifies facial deepfakes only)",
+    "image_benchmark_cases": [
+      {
+        "id": "img_face_real_dslr",
+        "ground_truth": "human",
+        "domain": "Authentic Portrait Photography",
+        "has_face": true,
+        "metadata_signature": "Canon EOS 6D, 85mm f/1.8, 1/200s, ISO 100",
+        "expected_scope": "In-Domain (Human Face)"
+      },
+      {
+        "id": "img_face_deepfake_stylegan",
+        "ground_truth": "ai_generated",
+        "domain": "Synthetic Face Generation (StyleGAN / FaceForensics++)",
+        "has_face": true,
+        "metadata_signature": "None (Generated synthetic face)",
+        "expected_scope": "In-Domain (Synthetic Face)"
+      },
+      {
+        "id": "img_general_real_nature",
+        "ground_truth": "human",
+        "domain": "Authentic Nature / Landscape",
+        "has_face": false,
+        "metadata_signature": "Nikon D750, 24mm f/8, 1/320s, ISO 200",
+        "expected_scope": "Out-of-Domain (No Face - Model Not Validated for General Art)"
+      },
+      {
+        "id": "img_general_ai_midjourney",
+        "ground_truth": "ai_generated",
+        "domain": "General AI Diffusion Landscape (Midjourney v6)",
+        "has_face": false,
+        "metadata_signature": "Clean web export, no camera EXIF",
+        "expected_scope": "Out-of-Domain (No Face - Diffusion Art)"
+      },
+      {
+        "id": "img_general_ai_sdxl_params",
+        "ground_truth": "ai_generated",
+        "domain": "Stable Diffusion XL Generation with Parameters",
+        "has_face": false,
+        "metadata_signature": "PNG tEXt chunk with prompt, steps: 30, sampler: DPM++ 2M, seed",
+        "expected_scope": "Out-of-Domain Pixel / In-Domain Metadata"
+      },
+      {
+        "id": "img_general_ai_dalle3_c2pa",
+        "ground_truth": "ai_generated",
+        "domain": "DALL-E 3 with C2PA Provenance Manifest",
+        "has_face": false,
+        "metadata_signature": "C2PA digital provenance: trainedAlgorithmicMedia",
+        "expected_scope": "Out-of-Domain Pixel / In-Domain C2PA"
+      },
+      {
+        "id": "img_general_real_scanned_doc",
+        "ground_truth": "human",
+        "domain": "Scanned Document / Paper Archive",
+        "has_face": false,
+        "metadata_signature": "Epson Scanner EXIF / Clean flatbed scan",
+        "expected_scope": "Out-of-Domain (No Face)"
+      },
+      {
+        "id": "img_general_ai_compressed_lossy",
+        "ground_truth": "ai_generated",
+        "domain": "Social Media Compressed AI Image (Stripped Metadata)",
+        "has_face": false,
+        "metadata_signature": "None (Stripped, lossy JPEG Q50)",
+        "expected_scope": "Out-of-Domain (No Face, Compressed)"
+      }
+    ],
+    "preliminary_notice": "Image dataset evaluation marked as PRELIMINARY due to domain boundary constraints."
+  }
+}

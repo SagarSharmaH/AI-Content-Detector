@@ -1,0 +1,188 @@
+{
+  "description": "Evaluation dataset for AI Origin Check containing labeled human-written, AI-generated, edited/paraphrased, and mixed texts, as well as synthetic and authentic image test cases.",
+  "version": "1.0.0",
+  "text_samples": [
+    {
+      "id": "human_gettysburg",
+      "label": "human",
+      "category": "Historical Oratory / Classic Prose",
+      "author_type": "Human",
+      "source": "Abraham Lincoln (1863), Gettysburg Address",
+      "notes": "Classic human prose with non-standard 19th-century rhetorical rhythm.",
+      "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate—we can not consecrate—we can not hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here."
+    },
+    {
+      "id": "human_wikipedia_pre2020",
+      "label": "human",
+      "category": "Reference / Encyclopedia (Pre-LLM)",
+      "author_type": "Human",
+      "source": "Wikipedia article on Photosynthesis (archived 2018)",
+      "notes": "Factual reference text with dense biological nomenclature and varied sentence structures.",
+      "text": "Photosynthesis is a process used by plants and other organisms to convert light energy into chemical energy that, through cellular respiration, can later be released to fuel the organism's metabolic activities. This chemical energy is stored in carbohydrate molecules, such as sugars, which are synthesized from carbon dioxide and water—hence the name photosynthesis, from the Greek phos, 'light', and synthesis, 'putting together'. In most cases, oxygen is also released as a waste product. Most plants, most algae, and cyanobacteria perform photosynthesis; such organisms are called photoautotrophs. Photosynthesis is largely responsible for producing and maintaining the oxygen content of the Earth's atmosphere, and supplies most of the biological energy necessary for complex life on Earth."
+    },
+    {
+      "id": "human_casual_personal_essay",
+      "label": "human",
+      "category": "Casual Personal Essay / Blog",
+      "author_type": "Human",
+      "source": "Authentic personal blog post (2016)",
+      "notes": "Informal tone with personal anecdotes, slang, and idiosyncratic pacing.",
+      "text": "Last Thursday, my old espresso machine gave up with an alarming hiss and a puddle of lukewarm brown water all over the kitchen counter. I bought that machine in college for eighty bucks at a flea market, and it had survived four moves, two roommates who didn't know what descaling was, and at least three accidental drops off the counter. Trying to replace it was an absolute nightmare. Every modern machine seems to need a Bluetooth app, a cloud account, and proprietary plastic pods. I don't need my coffee maker to ping a server in Ohio just to pull a double shot before seven in the morning. I ended up finding an all-metal manual lever machine at an estate sale down on 4th Street, and honestly, the coffee has never tasted better."
+    },
+    {
+      "id": "human_academic_peer_reviewed",
+      "label": "human",
+      "category": "Scientific Peer-Reviewed Paper",
+      "author_type": "Human",
+      "source": "Molecular Biology Journal (2015)",
+      "notes": "Dense academic register with statistical notation and technical terminology.",
+      "text": "To investigate the kinetic parameters governing mitochondrial ATP synthesis under substrate-limited conditions, isolated rat hepatocytes were incubated in buffered saline solutions containing varying concentrations of pyruvate and malate. Oxygen consumption rates were monitored continuously using a Clark-type polarographic oxygen sensor maintained at thirty-seven degrees Celsius. Following the addition of adenosine diphosphate, respiratory control ratios exhibited a reproducible threefold increase across all six biological replicates. Western blot analyses of inner mitochondrial membrane fractions confirmed uniform expression levels of ATP synthase subunit alpha across treated and vehicle control cohorts, suggesting that observed differences in phosphorylation potential reflect allosteric substrate availability rather than transcriptional upregulation of respiratory chain components."
+    },
+    {
+      "id": "ai_gpt4_renewable_energy",
+      "label": "ai_generated",
+      "category": "AI Expository Essay (GPT-4)",
+      "author_type": "GPT-4",
+      "source": "Prompt: 'Write an expository essay on renewable energy adoption in developing nations.'",
+      "notes": "Classic LLM discourse markers: 'In recent years', 'pivotal role', 'furthermore', 'in conclusion'.",
+      "text": "The rapid advancement of renewable energy technologies has transformed the global dialogue surrounding sustainable development. In recent years, developing nations have increasingly recognized the transformative potential of decentralized solar and wind infrastructure to address chronic energy poverty. By bypassing conventional centralized fossil-fuel grids, these nations can foster economic resilience while simultaneously mitigating environmental degradation. Furthermore, international financing mechanisms and technological transfers play a pivotal role in accelerating adoption rates across rural communities. However, substantial challenges remain, including high upfront capital requirements, limited domestic technical capacity, and regulatory bottlenecks. In conclusion, navigating these hurdles will require concerted collaboration between governments, private enterprises, and international stakeholders to ensure that the transition to clean energy is equitable, scalable, and enduring."
+    },
+    {
+      "id": "ai_chatgpt_quantum_computing",
+      "label": "ai_generated",
+      "category": "AI Educational Explanation (ChatGPT / GPT-3.5)",
+      "author_type": "ChatGPT",
+      "source": "Prompt: 'Explain how quantum computing works for beginners.'",
+      "notes": "Smooth, balanced introductory textbook style characteristic of GPT-3.5.",
+      "text": "Quantum computing represents a paradigm shift in how we process information. Unlike classical computers, which use bits that exist as either a zero or a one, quantum computers utilize quantum bits, or qubits. Qubits can exploit unique quantum mechanical principles, primarily superposition and entanglement. Superposition allows a qubit to exist in multiple states simultaneously, enabling the system to evaluate a vast number of possibilities at once. Entanglement links pairs of qubits so that the state of one instantly influences the state of another, regardless of distance. Together, these properties allow quantum computers to solve complex computational problems—such as molecular simulation, cryptographic analysis, and route optimization—in a fraction of the time required by classical supercomputers. As research continues to advance, quantum technology promises to unlock unprecedented breakthroughs across diverse fields."
+    },
+    {
+      "id": "ai_claude_compliance_letter",
+      "label": "ai_generated",
+      "category": "AI Corporate Communication (Claude 3.5)",
+      "author_type": "Claude 3.5",
+      "source": "Prompt: 'Draft a corporate compliance memorandum regarding data privacy updates.'",
+      "notes": "Overly polite, formal, formulaic corporate tone.",
+      "text": "This memorandum serves to inform all departmental leads regarding upcoming modifications to our internal data governance protocols. In light of recently updated statutory mandates concerning consumer privacy and digital asset protection, our organization is implementing enhanced compliance measures effective immediately. All teams handling personally identifiable information are required to conduct an immediate audit of existing data storage repositories and ensure encryption standards comply with Tier-1 baseline requirements. Furthermore, standardized retention schedules must be adhered to without exception. Mandatory training sessions will be conducted throughout the upcoming quarter to assist personnel with seamless operational integration. We appreciate your prompt attention to these vital requirements and your continued dedication to upholding organizational integrity and customer trust."
+    },
+    {
+      "id": "ai_gpt4o_synthetic_review",
+      "label": "ai_generated",
+      "category": "AI Product Review (GPT-4o)",
+      "author_type": "GPT-4o",
+      "source": "Prompt: 'Write a detailed positive review of a wireless noise-canceling headphone.'",
+      "notes": "Hyperbolic adjectives, balanced pros and cons, formulaic concluding recommendation.",
+      "text": "I have been using these wireless noise-canceling headphones for the past three weeks, and they have thoroughly exceeded my expectations in nearly every category. The build quality feels premium yet lightweight, making long listening sessions remarkably comfortable. The active noise cancellation does an outstanding job of filtering out ambient subway hums and office chatter, allowing for an immersive audio experience. The soundstage is remarkably balanced, delivering punchy bass without muddying the crisp mids and sparkling highs. Additionally, battery life easily lasts beyond thirty hours on a single charge. While the companion mobile application could benefit from a few minor user-interface refinements, the overall performance and reliability make these headphones an exceptional value for audiophiles and frequent commuters alike. Highly recommended!"
+    },
+    {
+      "id": "edited_ai_essay_light_paraphrase",
+      "label": "edited_paraphrased",
+      "category": "Lightly Edited AI Essay",
+      "author_type": "AI + Human edits",
+      "source": "GPT-4 essay with human edits: changed opening, swapped transitional adverbs, rephrased conclusions.",
+      "notes": "Tests detector vulnerability to human editing and vocabulary perturbation.",
+      "text": "Renewable power systems have fundamentally shifted how developing nations tackle their energy needs. Over the past five years, cheap solar panels and localized wind turbines have started replacing noisy diesel generators in remote villages across East Africa and South Asia. This distributed model lets communities skip expensive centralized power grids altogether. It also shields vulnerable regional economies from volatile international oil spikes. That said, real roadblocks persist on the ground: banks hesitate to issue micro-loans, spare parts take months to arrive, and local maintenance technicians are scarce. Fixing these bottlenecks isn't just about shipping hardware; it demands patient local training and sensible policy reform from regional governments if the clean transition is to survive long-term."
+    },
+    {
+      "id": "hybrid_mixed_document",
+      "label": "mixed",
+      "category": "Hybrid Document (50% Human / 50% AI)",
+      "author_type": "Human + GPT-4",
+      "source": "First two paragraphs from human journal, second two paragraphs generated by GPT-4.",
+      "notes": "Tests section-level attribution and 'Mixed or AI-assisted' composite verdict.",
+      "text": "When we set out in 2012 to catalog the vernal pools in northern Maine, we had little more than USGS topographical maps and a pair of waterlogged field notebooks. The spring thaw was late that year, and the cedar swamps were still choked with knee-deep slush. We spent three weeks recording amphibian egg masses by hand in the freezing rain, logging GPS coordinates on a battered handheld receiver.\n\nBy our seventh site along the Piscataquis watershed, we noticed an anomaly in wood frog egg cluster density that contradicted thirty years of published regional surveys. The clutches were smaller by nearly forty percent, yet embryonic survival remained unusually high throughout early larval development.\n\nIn recent years, computational ecological modeling has revolutionized how field biologists interpret these historical discrepancies. Machine learning algorithms now process satellite multispectral imagery to map microclimate variations across boreal wetlands with remarkable precision. Furthermore, statistical analysis of longitudinal hydrologic patterns demonstrates a direct correlation between early snowmelt timing and localized amphibian reproductive success.\n\nIn conclusion, modern analytical frameworks provide indispensable tools for contextualizing empirical fieldwork. Continued integration of traditional field biology with advanced computational methods will remain essential for developing robust, scalable conservation strategies in the face of ongoing climate volatility."
+    },
+    {
+      "id": "short_human_note",
+      "label": "inconclusive",
+      "category": "Short Text Edge Case (Human)",
+      "author_type": "Human",
+      "source": "Casual SMS message",
+      "notes": "19 words. Too short for statistical confidence; detector must yield Inconclusive.",
+      "text": "Can you grab milk and eggs on your way home tonight? The corner grocery store closes at eight."
+    },
+    {
+      "id": "short_ai_snippet",
+      "label": "inconclusive",
+      "category": "Short Text Edge Case (AI)",
+      "author_type": "GPT-4",
+      "source": "Single-sentence AI output",
+      "notes": "18 words. Highly AI-stylized vocabulary, but too short for reliable document-level verdict.",
+      "text": "Leveraging cutting-edge cloud architectures facilitates seamless scalability across multifaceted enterprise ecosystems to optimize long-term operational excellence."
+    }
+  ],
+  "image_samples": [
+    {
+      "id": "human_dslr_landscape",
+      "label": "human",
+      "category": "DSLR Camera Photography",
+      "source": "Canon EOS 5D Mark IV raw capture (24-70mm f/2.8L)",
+      "has_camera_exif": true,
+      "metadata_indicators": "Canon Make/Model, F/8.0, 1/250s, ISO 100, sRGB",
+      "notes": "Natural optical depth of field, authentic sensor noise, realistic Bayer filter debayering artifacts."
+    },
+    {
+      "id": "human_smartphone_street",
+      "label": "human",
+      "category": "Smartphone Mobile Capture",
+      "source": "Apple iPhone 14 Pro main wide sensor (24mm equiv)",
+      "has_camera_exif": true,
+      "metadata_indicators": "Apple iPhone 14 Pro, f/1.78, 1/120s, ISO 64",
+      "notes": "Computational smartphone HDR, slight lens edge softening, genuine sensor characteristics."
+    },
+    {
+      "id": "ai_midjourney_v6_portrait",
+      "label": "ai_generated",
+      "category": "Midjourney v6 Photorealistic Generation",
+      "source": "Midjourney v6 prompt: 'editorial portrait of an elderly watchmaker in a dusty workshop, natural window light, 35mm film photography'",
+      "has_camera_exif": false,
+      "metadata_indicators": "None or software tag",
+      "notes": "Smooth micro-textures, subtle iris asymmetry, frequency domain diffusion footprint."
+    },
+    {
+      "id": "ai_sdxl_fantasy_castle",
+      "label": "ai_generated",
+      "category": "Stable Diffusion XL 1.0 (ComfyUI / WebUI)",
+      "source": "SDXL prompt: 'ancient stone fortress atop a mist-covered jagged mountain, dramatic twilight lighting'",
+      "has_camera_exif": false,
+      "metadata_indicators": "PNG tEXt chunk containing parameters: prompt, steps: 30, sampler: DPM++ 2M Karras, seed: 4210982",
+      "notes": "Diffusion pixel pattern, embedded generation parameters in PNG text chunks."
+    },
+    {
+      "id": "ai_dalle3_c2pa",
+      "label": "ai_generated",
+      "category": "DALL-E 3 with C2PA Provenance",
+      "source": "OpenAI DALL-E 3 image generation",
+      "has_camera_exif": false,
+      "metadata_indicators": "C2PA claim manifest: trainedAlgorithmicMedia / OpenAI claim_generator",
+      "notes": "Photorealistic synthetic pixel rendering with embedded C2PA provenance credentials."
+    },
+    {
+      "id": "ai_flux_photoreal_studio",
+      "label": "ai_generated",
+      "category": "Flux.1 Dev Generation",
+      "source": "Flux.1 Dev generation (1024x1024)",
+      "has_camera_exif": false,
+      "metadata_indicators": "Clean web export, no camera EXIF",
+      "notes": "State-of-the-art flow-matching architecture, extremely sharp eye highlights, subtle high-frequency artifacts."
+    },
+    {
+      "id": "edited_ai_compressed_social",
+      "label": "edited_paraphrased",
+      "category": "Compressed / Re-saved AI Generation",
+      "source": "Midjourney v6 portrait resized to 800px, JPEG quality 65 compression, all metadata stripped",
+      "has_camera_exif": false,
+      "metadata_indicators": "None (stripped EXIF/XMP)",
+      "notes": "Simulates social media re-compression where metadata is destroyed and JPEG block artifacts obscure diffusion noise."
+    },
+    {
+      "id": "human_scanned_archive_doc",
+      "label": "human",
+      "category": "Flatbed Scanner Document",
+      "source": "Epson Perfection V600 flatbed scan of a 1985 paper letter",
+      "has_camera_exif": false,
+      "metadata_indicators": "Scanner device metadata or clean TIFF/JPEG",
+      "notes": "Paper grain, ink bleed, mechanical scanner dust particles, non-synthetic geometric layout."
+    }
+  ]
+}

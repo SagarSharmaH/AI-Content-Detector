@@ -1,0 +1,200 @@
+{
+  "description": "Held-out independent test benchmark for evaluating client-side AI detection models across text and image modalities. Never used for threshold tuning or model selection.",
+  "version": "2.0.0",
+  "text_benchmark": [
+    {
+      "id": "test_human_twain",
+      "ground_truth": "human",
+      "domain": "Classic Literature (19th Century)",
+      "license": "Public Domain (Project Gutenberg)",
+      "source": "Mark Twain (1884), Adventures of Huckleberry Finn, Chapter 1",
+      "text": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary. Aunt Polly—Tom's Aunt Polly, she is—and Mary, and the Widow Douglas is all told about in that book, which is mostly a true book, with some stretchers, as I said before."
+    },
+    {
+      "id": "test_human_darwin",
+      "ground_truth": "human",
+      "domain": "Historical Scientific Prose",
+      "license": "Public Domain (Project Gutenberg)",
+      "source": "Charles Darwin (1859), On the Origin of Species, Introduction",
+      "text": "When on board H.M.S. Beagle, as naturalist, I was much struck with certain facts in the distribution of the organic beings inhabiting South America, and in the geological relations of the present to the past inhabitants of that continent. These facts, as will be seen in the latter chapters of this volume, seemed to throw some light on the origin of species—that mystery of mysteries, as it has been called by one of our greatest philosophers. On my return home, it occurred to me, in 1837, that something might perhaps be made out on this question by patiently accumulating and reflecting on all sorts of facts which could possibly have any bearing on it."
+    },
+    {
+      "id": "test_human_wiki_tectonics",
+      "ground_truth": "human",
+      "domain": "Encyclopedia Reference",
+      "license": "CC-BY-SA 4.0",
+      "source": "Wikipedia (2017 revision), Plate Tectonics",
+      "text": "Plate tectonics is the generally accepted scientific theory that considers the Earth's lithosphere to comprise a number of large tectonic plates which have been slowly moving since roughly 3.4 billion years ago. The model builds on the concept of continental drift, an idea developed during the first decades of the 20th century. Plate tectonics came to be accepted by geoscientists after seafloor spreading was validated in the mid-to-late 1960s. Earth's lithosphere is broken into seven or eight major plates and many minor plates. Where the plates meet, their relative motion determines the type of boundary: convergent, divergent, or transform."
+    },
+    {
+      "id": "test_human_student_persuasive",
+      "ground_truth": "human",
+      "domain": "Authentic Student Essay (Pre-LLM)",
+      "license": "Public Research Dataset (Hewlett Foundation ASAP 2012)",
+      "source": "ASAP Competition Essay Prompt 1 (archived 2012)",
+      "text": "Dear local newspaper committee, computers have changed our lives in many different ways throughout the past decade. Some people believe that technology is making society more isolated, but I strongly disagree. In our high school library, students from different backgrounds gather around computer stations to collaborate on history presentations, share digital research databases, and help each other edit college admission applications. Without these shared digital resources, students whose families cannot afford private laptops at home would be left at a severe disadvantage. Technology does not isolate people when it is used to foster community learning and equal opportunity in public schools."
+    },
+    {
+      "id": "test_human_pmc_crispr",
+      "ground_truth": "human",
+      "domain": "Peer-Reviewed Scientific Abstract",
+      "license": "CC-BY 4.0 (PubMed Central)",
+      "source": "PMC5421890, Molecular Therapy Nucleic Acids (2017)",
+      "text": "Clustered regularly interspaced short palindromic repeats (CRISPR)-associated Cas9 nucleases have emerged as robust tools for targeted genome editing in eukaryotic cells. However, the requirement for a specific protospacer adjacent motif (PAM) flanking the target sequence imposes constraints on target site selection. Here, we engineered engineered variants of Streptococcus pyogenes Cas9 with altered PAM specificities using structure-guided directed evolution. Biochemical cleavage assays demonstrated that variant Cas9-VQR effectively cleaves target sequences harboring non-canonical NGA PAMs with minimal off-target activity in human HEK293T cells, substantially expanding the targeting repertoire for therapeutic gene disruption."
+    },
+    {
+      "id": "test_human_travel_blog",
+      "ground_truth": "human",
+      "domain": "Casual Personal Travelogue",
+      "license": "CC0 / Personal Journal (2014)",
+      "source": "Patagonia Trail Journal (archived 2014)",
+      "text": "By four in the afternoon, the wind howling down from the French Valley had ripped the rainfly right off our second tent pole. We were huddled behind a boulder chewing stale granola and trying to warm our fingers over a single sputtering gas burner. In every glossy travel magazine, the Torres del Paine looks like a serene postcard of turquoise glacial lakes and golden granite spires. In reality, you spend six hours a day stepping through calf-deep mud while sideways sleet stings your cheeks. But then around six o'clock, the clouds parted just enough for a shaft of sunset to ignite the southern horn in brilliant orange, and suddenly every blister felt completely worth it."
+    },
+    {
+      "id": "test_ai_gpt4o_economics",
+      "ground_truth": "ai_generated",
+      "domain": "AI Policy Analysis (GPT-4o)",
+      "license": "Synthetic Output (OpenAI GPT-4o, 2024)",
+      "source": "Prompt: 'Evaluate the economic impact of universal basic income on rural labor markets.'",
+      "text": "The implementation of universal basic income in rural economies presents a complex interplay between financial security and local labor force participation. Proponents emphasize that unconditional cash transfers establish a vital economic floor, reducing extreme poverty and enabling agricultural workers to invest in equipment, vocational training, and local entrepreneurship. Furthermore, guaranteed baseline liquidity can stimulate regional commerce by bolstering consumer demand within local supply chains. However, economic critics caution that poorly calibrated transfer amounts may diminish incentives for seasonal agricultural harvesting and strain municipal public budgets. Ultimately, the long-term viability of rural basic income programs will depend on adaptive fiscal frameworks that balance poverty alleviation with sustainable labor incentives."
+    },
+    {
+      "id": "test_ai_claude35_climate",
+      "ground_truth": "ai_generated",
+      "domain": "AI Environmental Planning (Claude 3.5 Sonnet)",
+      "license": "Synthetic Output (Anthropic Claude 3.5 Sonnet, 2024)",
+      "source": "Prompt: 'Analyze urban heat island mitigation strategies for dense metropolitan areas.'",
+      "text": "Urban heat island effects present escalating public health and infrastructure challenges across dense metropolitan environments. High concentrations of asphalt surfaces, dark roofs, and vehicular emissions absorb solar radiation during daylight hours and re-radiate thermal energy throughout the evening. Implementing targeted mitigation strategies requires a multifaceted urban planning approach. Expanding high-albedo cool roofs and permeable reflective pavements significantly reduces thermal retention across municipal road networks. Additionally, strategically integrating biophilic infrastructure—such as continuous tree canopies, bioswales, and green rooftops—enhances evaporative cooling while simultaneously improving stormwater runoff management. Coordinated municipal policy interventions remain crucial for building resilient, climate-adapted urban neighborhoods."
+    },
+    {
+      "id": "test_ai_llama3_philosophy",
+      "ground_truth": "ai_generated",
+      "domain": "AI Epistemology Essay (Llama 3 70B)",
+      "license": "Synthetic Output (Meta Llama 3 70B Instruct, 2024)",
+      "source": "Prompt: 'Explain the epistemological problem of other minds.'",
+      "text": "The epistemological problem of other minds centers on how an individual can attain justified belief regarding the conscious internal experiences of other beings. While a person has direct, first-person subjective access to their own sensations, thoughts, and emotional states, they can only observe the external physical behavior and verbal utterances of others. Traditionally, philosophers have appealed to the argument from analogy, which posits that since others share similar anatomical structures and respond to sensory stimuli in analogous ways, they likely possess conscious minds. Nevertheless, philosophical skeptics argue that behavioral parity does not logically preclude the possibility of philosophical zombies—entities that behave identically to conscious individuals while possessing no inner qualia."
+    },
+    {
+      "id": "test_ai_mistral_tech",
+      "ground_truth": "ai_generated",
+      "domain": "AI Technical Architecture (Mistral Large)",
+      "license": "Synthetic Output (Mistral Large, 2024)",
+      "source": "Prompt: 'Discuss event-driven microservices architecture patterns.'",
+      "text": "Event-driven microservice architecture decouples distributed software systems by utilizing asynchronous messaging buses rather than synchronous REST or RPC protocols. In this paradigm, publisher services emit event payloads notifying the wider cluster of state transitions, while independent subscriber services consume these events asynchronously. This architectural pattern provides notable advantages, including horizontal scalability, fault tolerance, and independent service deployment cycles. However, asynchronous topologies introduce substantial operational complexities. Maintaining transactional consistency requires implementing distributed patterns like the Saga pattern, and debugging event order anomalies across partitioned Kafka clusters demands comprehensive distributed tracing and idempotent consumer logic."
+    },
+    {
+      "id": "test_ai_gpt35_history",
+      "ground_truth": "ai_generated",
+      "domain": "AI Historical Summary (ChatGPT / GPT-3.5)",
+      "license": "Synthetic Output (OpenAI GPT-3.5, 2023)",
+      "source": "Prompt: 'Summarize the causes of the British Industrial Revolution.'",
+      "text": "The British Industrial Revolution began in the mid-eighteenth century due to a confluence of economic, technological, and geographic factors. Britain possessed abundant domestic coal and iron ore reserves located in close proximity to navigable waterways, enabling low-cost bulk transportation. Furthermore, advancements in agricultural productivity freed a large labor force to migrate into rapidly growing manufacturing hubs like Manchester and Birmingham. Inventions such as James Watt's steam engine and the spinning jenny fundamentally transformed textile production. In conclusion, colonial trade networks and strong patent protections provided the commercial capital and incentives necessary to sustain rapid industrial expansion."
+    },
+    {
+      "id": "test_ai_paraphrased_light",
+      "ground_truth": "ai_generated",
+      "domain": "Lightly Paraphrased AI Writing",
+      "license": "Synthetic Base with Human Edits",
+      "source": "GPT-4o essay modified with synonym swaps and transition rephrasings",
+      "text": "Putting universal basic income into rural towns creates a tricky balance between financial security and available workers. Supporters point out that monthly cash checks build an essential safety net, wiping out deep poverty and helping farmers buy better tools or take vocational courses. What is more, dependable local spending gives small village shops a welcome boost. Even so, skeptics argue that if payments are set too high, seasonal farm hands might stop showing up for harvest, putting a heavy strain on county funds. In the end, whether rural cash transfers actually work long-term comes down to whether lawmakers can balance poverty relief with steady work incentives."
+    },
+    {
+      "id": "test_ai_paraphrased_heavy",
+      "ground_truth": "ai_generated",
+      "domain": "Heavily Paraphrased AI Writing",
+      "license": "Synthetic Base with Heavy Human Rewriting",
+      "source": "Claude 3.5 Sonnet outline heavily rewritten in casual first-person prose",
+      "text": "City heat in mid-July is brutal, mostly because every street corner is concrete and black asphalt that soaks up baking sun all afternoon and radiates it straight back into your bedroom at midnight. If city planners actually want to cool things down, they need to quit planting decorative shrubs and start planting real shade trees. Tearing up old parking lots to put in rain gardens and painting flat rooftops bright reflective white makes an immediate difference you can feel on the sidewalk. You can't just talk about green architecture at council meetings; you have to physically change what city streets are paved with."
+    },
+    {
+      "id": "test_mixed_essay_50_50",
+      "ground_truth": "mixed",
+      "domain": "Hybrid Document (50% Human / 50% AI)",
+      "license": "50% CC-BY (PMC) / 50% Synthetic (GPT-4o)",
+      "source": "Paragraph 1 from PubMed Central paper (human); Paragraph 2 generated by GPT-4o",
+      "text": "Clustered regularly interspaced short palindromic repeats (CRISPR)-associated Cas9 nucleases have emerged as robust tools for targeted genome editing in eukaryotic cells. However, the requirement for a specific protospacer adjacent motif (PAM) flanking the target sequence imposes constraints on target site selection. Here, we engineered variants of Streptococcus pyogenes Cas9 with altered PAM specificities using structure-guided directed evolution.\n\nIn recent years, integrating deep learning algorithms into CRISPR guide-RNA design pipelines has substantially expedited the identification of high-affinity off-target sites across complex mammalian genomes. Machine learning models trained on high-throughput cleavage assays can predict on-target efficiency and potential off-target double-stranded breaks with unprecedented computational precision. Furthermore, continuous refinement of predictive binding kinetics will remain essential for establishing clinical safety benchmarks in human gene therapy."
+    },
+    {
+      "id": "test_short_human_calendar",
+      "ground_truth": "inconclusive",
+      "domain": "Short Text Edge Case (Human)",
+      "license": "Casual Human Note",
+      "source": "SMS / Slack message (14 words)",
+      "text": "Let's reschedule the budget review to Thursday at two in the main conference room."
+    },
+    {
+      "id": "test_short_ai_headline",
+      "ground_truth": "inconclusive",
+      "domain": "Short Text Edge Case (AI)",
+      "license": "Synthetic Output (GPT-4)",
+      "source": "Marketing slogan generation (15 words)",
+      "text": "Empowering seamless cross-functional synergies to accelerate scalable digital transformation across enterprise cloud ecosystems."
+    }
+  ],
+  "image_benchmark": [
+    {
+      "id": "img_face_real_dslr",
+      "ground_truth": "human",
+      "domain": "Authentic Portrait Photography",
+      "has_face": true,
+      "metadata_signature": "Canon EOS 6D, 85mm f/1.8, 1/200s, ISO 100",
+      "expected_scope": "In-Domain (Human Face)"
+    },
+    {
+      "id": "img_face_deepfake_stylegan",
+      "ground_truth": "ai_generated",
+      "domain": "Synthetic Face Generation (StyleGAN / FaceForensics++)",
+      "has_face": true,
+      "metadata_signature": "None (Generated synthetic face)",
+      "expected_scope": "In-Domain (Synthetic Face)"
+    },
+    {
+      "id": "img_general_real_nature",
+      "ground_truth": "human",
+      "domain": "Authentic Nature / Landscape",
+      "has_face": false,
+      "metadata_signature": "Nikon D750, 24mm f/8, 1/320s, ISO 200",
+      "expected_scope": "Out-of-Domain (No Face - Model Not Validated for General Art)"
+    },
+    {
+      "id": "img_general_ai_midjourney",
+      "ground_truth": "ai_generated",
+      "domain": "General AI Diffusion Landscape (Midjourney v6)",
+      "has_face": false,
+      "metadata_signature": "Clean web export, no camera EXIF",
+      "expected_scope": "Out-of-Domain (No Face - Diffusion Art)"
+    },
+    {
+      "id": "img_general_ai_sdxl_params",
+      "ground_truth": "ai_generated",
+      "domain": "Stable Diffusion XL Generation with Parameters",
+      "has_face": false,
+      "metadata_signature": "PNG tEXt chunk with prompt, steps: 30, sampler: DPM++ 2M, seed",
+      "expected_scope": "Out-of-Domain Pixel / In-Domain Metadata"
+    },
+    {
+      "id": "img_general_ai_dalle3_c2pa",
+      "ground_truth": "ai_generated",
+      "domain": "DALL-E 3 with C2PA Provenance Manifest",
+      "has_face": false,
+      "metadata_signature": "C2PA digital provenance: trainedAlgorithmicMedia",
+      "expected_scope": "Out-of-Domain Pixel / In-Domain C2PA"
+    },
+    {
+      "id": "img_general_real_scanned_doc",
+      "ground_truth": "human",
+      "domain": "Scanned Document / Paper Archive",
+      "has_face": false,
+      "metadata_signature": "Epson Scanner EXIF / Clean flatbed scan",
+      "expected_scope": "Out-of-Domain (No Face)"
+    },
+    {
+      "id": "img_general_ai_compressed_lossy",
+      "ground_truth": "ai_generated",
+      "domain": "Social Media Compressed AI Image (Stripped Metadata)",
+      "has_face": false,
+      "metadata_signature": "None (Stripped, lossy JPEG Q50)",
+      "expected_scope": "Out-of-Domain (No Face, Compressed)"
+    }
+  ]
+}

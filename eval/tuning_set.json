@@ -1,0 +1,36 @@
+{
+  "description": "Validation and tuning dataset used to calibrate model threshold boundaries (0.35/0.65) and short-text word-count cutoffs (<35 words). Held separate from test_set.json.",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "tune_human_historical",
+      "expected": "human",
+      "words": 160,
+      "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this."
+    },
+    {
+      "id": "tune_human_wiki",
+      "expected": "human",
+      "words": 114,
+      "text": "Photosynthesis is a process used by plants and other organisms to convert light energy into chemical energy that, through cellular respiration, can later be released to fuel the organism's metabolic activities. This chemical energy is stored in carbohydrate molecules, such as sugars, which are synthesized from carbon dioxide and water—hence the name photosynthesis, from the Greek phos, 'light', and synthesis, 'putting together'. In most cases, oxygen is also released as a waste product."
+    },
+    {
+      "id": "tune_ai_gpt4",
+      "expected": "ai_generated",
+      "words": 117,
+      "text": "The rapid advancement of renewable energy technologies has transformed the global dialogue surrounding sustainable development. In recent years, developing nations have increasingly recognized the transformative potential of decentralized solar and wind infrastructure to address chronic energy poverty. By bypassing conventional centralized fossil-fuel grids, these nations can foster economic resilience while simultaneously mitigating environmental degradation. In conclusion, navigating these hurdles will require concerted collaboration."
+    },
+    {
+      "id": "tune_short_human",
+      "expected": "inconclusive",
+      "words": 18,
+      "text": "Can you grab milk and eggs on your way home tonight? The corner grocery store closes at eight."
+    },
+    {
+      "id": "tune_short_ai",
+      "expected": "inconclusive",
+      "words": 16,
+      "text": "Leveraging cutting-edge cloud architectures facilitates seamless scalability across multifaceted enterprise ecosystems to optimize long-term operational excellence."
+    }
+  ]
+}
